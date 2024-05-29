@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+}
+
+.grey-color {
+    color: #a7a9ab;
+}
+
+.light-grey {
+    color: #c8c9ca;
+}
+
+.dark-grey {
+    color: #4c5f71
+}
+
+.main-body {
+    grid-template-columns: 1fr 5fr;
+    min-height: 100vh;
+    transition: 0.3s ease-in-out;
+}
