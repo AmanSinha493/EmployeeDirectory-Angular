@@ -1,0 +1,40 @@
+<div class="filter-bar  flex">
+    <div class="flex filter-options-container">
+        <div>Filter</div>
+
+        <img src="../../../assets/images/filter-3-line red.svg" alt="filter" class="red-filter">
+        <!-- <img src="./assets/tick.svg" alt="filter" class="red-filter"> -->
+
+        <div class="flex-column filter" id="status-filter">
+            <div class="filter-options dark-grey flex-column">Status</div>
+            <div class="status-dropdown hide">
+                <div class="Active"><input type="checkbox">Active</div>
+                <div class="Inactive"><input type="checkbox">In Active</div>
+            </div>
+        </div>
+
+        <div class="flex-column filter" id="location-filter">
+            <div class="filter-options dark-grey flex-column">
+                Location</div>
+            <div class="location-dropdown hide">
+                <div class="Hyderabad"><input type="checkbox" id="Hyderabad">Hyderabad</div>
+                <div class="Bangalore"><input type="checkbox">Bangalore</div>
+                <div class="Mumbai"><input type="checkbox">Mumbai</div>
+            </div>
+
+        </div>
+
+        <div class="flex-column filter" id="department-filter">
+            <div class="filter-options dark-grey flex-column">Department
+            </div>
+            <div class="department-dropdown hide">
+                <div class="ProductEngg"><input type="checkbox">Product Engg</div>
+                <div class="QA"><input type="checkbox">QA</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex filter-action">
+        <div class="reset-btn flex" >Reset</div>
+        <div class="apply-btn flex">Apply</div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+.heading {
+    margin-top: 1.5%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2%;
+    margin-bottom: 1.5%;
+}
+
+.heading-text {
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+.employee-heading {
+    padding-bottom: 2%;
+    font-size: 1rem;
+}
+
+.heading-desc {
+    font-size: .7rem;
+
+}
+
+.export-button img {
+    padding-right: 5%;
+}
+
+.export-button {
+    justify-content: center;
+    background: white;
+    align-items: center;
+    border: 1px solid#a7a9ab;
+    border-radius: .5rem;
+    padding: 0.5%;
+    padding-right: 0.7%;
+    height: 80%;
+    width: 12%;
+    cursor: pointer;
+}
+
+
+.add-employee-button {
+    cursor: pointer;
+    justify-content: center;
+    background-color: #f44848;
+    border-radius: .5rem;
+    align-items: center;
+    /* height: 100%; */
+    padding: 0.4% 0.5%;
+    width: 15%;
+}
+
+.add-employee-button button {
+    cursor: pointer;
+    background-color: #f44848;
+    border: none;
+    justify-content: center;
+    width: 100%;
+}
+
+.add-employee-button p {
+    padding: 3%;
+    color: white;
+}
+
+.add-employee-button i {
+    color: white;
+    padding: 3%;
+    padding-right: 5%;
+}
+
+.heading button p {
+    font-size: .8rem;
+}

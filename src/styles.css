@@ -52,3 +52,31 @@ a {
     min-height: 100vh;
     transition: 0.3s ease-in-out;
 }
+
+.side-bar,
+.employees-detail {
+    height: 100vh;
+}
+.employees-detail{
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.side-bar-collapsed.hide,.side-bar.hide{
+    display: none;
+}
+
+.side-bar {
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.057);
+    overflow-x: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.user-management,
+.departments,
+.install-update,
+.all {
+    margin-top: 3vh;
+}
+
