@@ -1,0 +1,31 @@
+<div class="role-block-container grid">
+    <div class="role-block flex-column" *ngFor="let role of roles">
+        <div class="role-heading flex">
+            <div class="role-name">{{role.role}}</div>
+            <div class="edit-icon"><img src="../../../assets/images/edit.svg" alt=""></div>
+        </div>
+        <div class="role-info-container flex-column">
+            <div class="role-info flex">
+                <div><img src="../../../assets/images/team_svgrepo.com.svg" alt=""></div>
+                <div> Department</div>
+                <div class="role-info-name">{{role.dept}}</div>
+            </div>
+            <div class="role-info flex">
+                <div><img src="../../../assets/images/location-pin-alt-1_svgrepo.com.svg" alt=""></div>
+                <div>Location</div>
+                <div class="role-info-name">{{role.location}}</div>
+            </div>
+            <div class="role-info flex">
+                <p> Total Employees</p>
+                <div class="employee-cnt-img flex">
+                    <img src="../../../assets/images/admin-search.png" alt="">
+                    <img src="../../../assets/images/admin-search.png" alt="">
+                    <img src="../../../assets/images/admin-search.png" alt="">
+                    <img src="../../../assets/images/admin-search.png" alt="">
+                    <p>{{0}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-btn flex"><button>View all Employees</button><i class="fa-solid fa-arrow-right-long"></i></div>
+    </div>
+</div>

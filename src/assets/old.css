@@ -79,7 +79,7 @@ a {
     width: 60%;
 } */
 
-.logo {
+/* .logo {
     margin-bottom: 5%;
 }
 
@@ -90,7 +90,7 @@ a {
     margin-left: .5rem;
     height: 4rem;
     width: 4rem;
-}
+} */
 /* 
 .logo,
 .all,
@@ -292,14 +292,13 @@ a {
 
 }
 
-.employees-detail {
+/* .employees-detail {
     position: relative;
     padding-right: 2%;
-    /* padding-left: 5%; */
     padding-left: 2%;
-}
+} */
 
-.collapse-button {
+/* .collapse-button {
     cursor: pointer;
     position: absolute;
     border: none;
@@ -316,7 +315,7 @@ a {
     height: 2vw;
     width: 2vw;
     object-fit: cover;
-}
+} */
 
 /* .search-bar {
 
@@ -618,7 +617,7 @@ a {
 
  */
 
-.employee-list-body {
+/* .employee-list-body {
     z-index: 0;
     margin-top: 1%;
     margin-bottom: .6rem;
@@ -627,8 +626,8 @@ a {
     position: relative;
     overflow: auto;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
+} */
+/* 
 .list-updation-bar {
     background-color: white;
     position: sticky;
@@ -762,7 +761,6 @@ th span {
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
-    /* padding: 0.5rem; */
     width: 70%;
     padding: 10% 7%;
     border-radius: .3rem;
@@ -777,7 +775,7 @@ th span {
 .btn-inactive {
     background-color: #feeeee;
     color: red;
-}
+} */
 
 .dropdown-btn {
     margin-left: auto;
@@ -836,7 +834,7 @@ thead,
 .list-updation-bar {
     z-index: 1;
 }
-
+/* 
 .add-employee-form {
     visibility: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -845,27 +843,25 @@ thead,
     border-radius: 1rem;
     background-color: #fff;
     z-index: 4;
-    /* padding-left: 3%; */
+
     padding: 0% 3%;
     position: absolute;
     top: 1.5%;
     left: 10%;
     transition: transform 0.4s, top 0.4s;
-    /* transition: all .5s ease-in-out; */
+
 }
 
 .show-addEmployee-form {
     visibility: visible;
     transform: translateY(0%);
     scale: 0.9;
-    /* transition: transform 0.4s, bottom 0.4s; */
 }
-
 
 .add-employee-form h1 {
     margin-top: 4vh;
     margin-bottom: 1vh;
-    /* font-weight: bold; */
+
     font-size: 1.2rem;
 
 }
@@ -899,7 +895,7 @@ thead,
 }
 
 .add-employee-form h2 {
-    /* font-weight: normal; */
+
     font-size: .8rem;
 }
 
@@ -966,7 +962,7 @@ label {
     display: flex;
     flex-direction: row;
     margin-top: 1rem;
-    /* margin-right: 1rem; */
+
     margin-bottom: .7rem;
     justify-content: flex-end;
 }
@@ -1015,7 +1011,7 @@ label {
 .add-employee-form span {
     font-size: .7rem;
     height: 0.9rem;
-}
+} */
 
 .delete-confirmation,.edit-cancel-popup {
     justify-content: center;

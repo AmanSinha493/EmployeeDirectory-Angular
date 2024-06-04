@@ -46,13 +46,13 @@
                 </th>
             </tr>
         </thead>
-        <tbody *ngFor="let employee of employees">
-            <app-employee-row [empData]="employee"></app-employee-row>
+        <tbody >
+            <!-- <app-employee-row [empData]="employee"></app-employee-row> -->
             <!-- <tr *ngFor="let employee of employees">
                 <app-employee-row [empData]="employee"></app-employee-row>
             </tr> -->
 
-            <!-- <tr>
+            <tr *ngFor="let employee of employees">
                 <td class="check-box-col"><input type="checkbox" class="select"></td>
                 <td class="list-profile flex edit-col">
                     <img src="{{employee.img}}" alt="profile">
@@ -77,7 +77,7 @@
                         <div class="child delete">Delete</div>
                     </div>
                 </td>
-            </tr> -->
+            </tr>
         </tbody>
     </table>
 </div>

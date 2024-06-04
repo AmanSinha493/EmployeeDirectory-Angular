@@ -57,9 +57,10 @@ a {
 .employees-detail {
     height: 100vh;
 }
-.employees-detail{
-    margin-right: 2%;
-    margin-left: 2%;
+.employees-detail {
+    position: relative;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 .side-bar-collapsed.hide,.side-bar.hide{
     display: none;
@@ -72,7 +73,24 @@ a {
     padding-right: 5%;
 }
 
+.collapse-button {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    top: 3vh;
+    left: -2%;
+}
+.collapse-button.collapsed{
+    transform: rotate(180deg);
+    margin-left: 1%;
+}
 
+.collapse-button img {
+    height: 2vw;
+    width: 2vw;
+    object-fit: cover;
+}
 .user-management,
 .departments,
 .install-update,

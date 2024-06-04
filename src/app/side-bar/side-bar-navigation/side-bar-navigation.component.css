@@ -80,6 +80,12 @@
     background-color: #f44848;
 }
 
+.employees-bar-collapse {
+    position: relative;
+    background-color: #fde6e6;
+    width: 100%;
+    justify-content: center;
+}
 .selected-mark-collapsed {
     width: 2%;
     border-radius: .5rem;

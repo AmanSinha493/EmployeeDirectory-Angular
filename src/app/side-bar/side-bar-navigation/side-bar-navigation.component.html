@@ -1,33 +1,54 @@
-<div class="all">
-    <div class="light-grey function-name">ALL</div>
-    <div class="dasboard grid side-bar-options">
-        <div class="lock-icon"><img src="../../../assets/images/Horizontal nav/Dashboard.svg" alt="lock-icon"></div>
-        <div class="text grey-color">Dasboard</div>
-    </div>
-    <div class="employees flex-column selected">
-        <div class="employees-bar grid side-bar-options">
-            <div class="lock-icon"><img src="../../../assets/images/Horizontal nav/Employees.svg" alt="lock-icon"></div>
-            <div class="text">Employees</div>
-            <div class="selected-mark"></div>
+<div *ngIf="isCollapsed; else elseBlock">
+    <div class="icon-container flex-column">
+        <div class="lock-icon-collapse"><img src="../../../assets/images/Horizontal nav/Dashboard.svg" alt="lock-icon">
         </div>
-    </div>
+        <div class="employees-bar-collapse flex">
+            <div class="lock-icon-collapse"><img src="../../../assets/images/Horizontal nav/Employees.svg"
+                    alt="lock-icon">
+            </div>
 
-
-
-
-    <div class="light-grey function-name">Roles/ User Management</div>
-    <a href="../../../public/html/Roles.html">
-        <div class="user-management__roles grid side-bar-options">
-            <div class="lock-icon"><img src="../../../assets/images/Horizontal nav/Roles.svg" alt="lock-icon"></div>
-            <div class="text grey-color">Roles</div>
-            <div class="arrow flex"><i class="fa-solid fa-angle-right dark-grey"></i></div>
+            <div class="selected-mark-collapsed"></div>
         </div>
-    </a>
+        <a href="/Roles.html">
+            <div class="lock-icon-collapse"><img src="../../../assets/images/Horizontal nav/Roles.svg" alt="lock-icon">
+            </div>
+        </a>
 
-    <div class="user-management__assign grid side-bar-options">
-        <div class="lock-icon assign-roles-img"><img src="../../../assets/images/Horizontal nav/assign user.svg"
-                alt="lock-icon"></div>
-        <div class="text grey-color assign-roles">Assign User Roles</div>
-        <div class="arrow flex"><i class="fa-solid fa-angle-right light grey"></i></div>
+        <div class="lock-icon-collapse assign-roles-img"><img
+                src="../../../assets/images/Horizontal nav/assign user.svg" alt="lock-icon"></div>
+
     </div>
 </div>
+<ng-template #elseBlock>
+    <div class="all">
+        <div class="light-grey function-name">ALL</div>
+        <div class="dasboard grid side-bar-options">
+            <div class="lock-icon"><img src="../../../assets/images/Horizontal nav/Dashboard.svg" alt="lock-icon"></div>
+            <div class="text grey-color">Dasboard</div>
+        </div>
+        <div class="employees flex-column selected">
+            <div class="employees-bar grid side-bar-options">
+                <div class="lock-icon"><img src="../../../assets/images/Horizontal nav/Employees.svg" alt="lock-icon">
+                </div>
+                <div class="text">Employees</div>
+                <div class="selected-mark"></div>
+            </div>
+        </div>
+
+        <div class="light-grey function-name">Roles/ User Management</div>
+        <a href="../../../public/html/Roles.html">
+            <div class="user-management__roles grid side-bar-options">
+                <div class="lock-icon"><img src="../../../assets/images/Horizontal nav/Roles.svg" alt="lock-icon"></div>
+                <div class="text grey-color">Roles</div>
+                <div class="arrow flex"><i class="fa-solid fa-angle-right dark-grey"></i></div>
+            </div>
+        </a>
+
+        <div class="user-management__assign grid side-bar-options">
+            <div class="lock-icon assign-roles-img"><img src="../../../assets/images/Horizontal nav/assign user.svg"
+                    alt="lock-icon"></div>
+            <div class="text grey-color assign-roles">Assign User Roles</div>
+            <div class="arrow flex"><i class="fa-solid fa-angle-right light grey"></i></div>
+        </div>
+    </div>
+</ng-template>

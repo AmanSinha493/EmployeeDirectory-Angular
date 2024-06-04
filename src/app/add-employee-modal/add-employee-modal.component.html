@@ -1,0 +1,118 @@
+<div class="add-employee-form">
+    <h1>Add Employee</h1>
+    <form id="employeeForm" class="employee-form flex-column" novalidate>
+        <div class="profile-image-container flex" id="profileImageContainer">
+            <div class="default-profile-photo flex">
+                <img src="../../assets/images/add-employee-default-user.svg" alt="Default User Image"
+                    id="profileImagePreview" />
+            </div>
+            <label for="profileImageInput" class="upload-profile-pic-btn flex">
+                Upload Profile Picture
+            </label>
+            <input type="file" id="profileImageInput" name="profileImage" accept="image/*" />
+        </div>
+        <div class="employee-detail-form">
+            <div class="employee-form-profile-details flex-column">
+                <div class="personal-information-container">
+                    <h2>Personal Information</h2>
+                    <div class="personal-information">
+                        <div class="flex">
+                            <div class="input-field-container">
+                                <label for="empNo">Emp No</label>
+                                <input type="text" id="empNo" name="empNo" placeholder="Employee no" />
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input-field-container fName-Container">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName"
+                                    placeholder="First Name" />
+                                <span></span>
+
+                            </div>
+                            <div class="input-field-container lName-Container">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
+                                <span></span>
+
+                            </div>
+                            <div class="input-field-container">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob" class="date-input"
+                                    placeholder="Select" />
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input-field-container email-Container">
+                                <label for="email">Email Id</label>
+                                <input type="email" id="email" name="email"
+                                    placeholder="Joe.j@Technover.com" />
+                                <span></span>
+                            </div>
+                            <div class="input-field-container mobile-Container">
+                                <label for="mobileNumber">Mobile Number</label>
+                                <input type="text" id="mobileNumber" name="mobileNumber"
+                                    placeholder="0000000000" />
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="employment-information-container">
+                    <h2>Employment Information</h2>
+                    <div class="employment-information">
+                        <div class="flex">
+                            <div class="input-field-container joining-date">
+                                <label for="joiningDate"> Joining Date</label>
+                                <input type="date" id="joiningDate" name="joiningDate" />
+                                <span></span>
+                            </div>
+                            <div class="input-field-container location-container">
+                                <label for="location">Location</label>
+                                <select id="location" name="location">
+                                    <option value="" hidden>select</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                </select>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input-field-container jobTitle-container">
+                                <label for="jobTitle">Job Title</label>
+                                <select id="jobTitle" name="jobTitle">
+                                    <option value="" hidden>select</option>
+                                    <!-- <option value="UI/UX">UX Designer</option>
+                                    <option value="Full Stack Developer">Full Stack Developer</option>
+                                    <option value="Senior Developer">Senior Developer</option>
+                                    <option value="Human Resource Manager">Human Resource Manager</option>
+                                    <option value="Customer Service Manager">Customer Service Manager
+                                    </option> -->
+                                </select>
+                                <span></span>
+                            </div>
+                            <div class="input-field-container department-container">
+                                <label for="department">Department</label>
+                                <select id="department" name="department">
+                                    <option value="" hidden>select</option>
+                                    <option value="Product Engg">Product Engg</option>
+                                    <!-- <option value="IT">IT</option> -->
+                                    <option value="QA">QA </option>
+                                    <!-- <option value="Finance">Finance</option> -->
+                                </select>
+                                <span></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="reset" id="cancel" (click)="closeAddEmployeeModal()">Cancel</button>
+                        <button type="submit" id="submitButton" data-dismiss="modal">Add Employee</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

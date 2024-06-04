@@ -1,6 +1,6 @@
 <div class="a-to-z-filter flex">
     <img id="filter-icon" src="../../../assets/images/filter-icon-black.svg" alt="filter">
-    <div>A</div>
+    <!-- <div>A</div>
     <div>B</div>
     <div>C</div>
     <div>D</div>
@@ -25,5 +25,27 @@
     <div>W</div>
     <div>X</div>
     <div>Y</div>
-    <div>Z</div>
+    <div>Z</div> -->
+    <div *ngFor="let i of range(1, 27)">
+        <!-- {{ String.fromCharCode(64 + i) }} -->
+        {{ getLetter(i) }}
+      </div>
 </div>
+
+
+
+<!-- import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example',
+  template: `
+    <div *ngFor="let i of range(1, 27)">
+      {{ String.fromCharCode(64 + i) }}
+    </div>
+  `
+})
+export class ExampleComponent {
+  range(start: number, end: number) {
+    return Array(end - start).fill(0).map((_, i) => start + i);
+  }
+} -->

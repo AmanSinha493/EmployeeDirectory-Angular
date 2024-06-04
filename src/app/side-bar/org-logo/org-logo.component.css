@@ -3,3 +3,16 @@
     padding-left: 5%;
     width: 60%;
 }
+
+.logo {
+    margin-bottom: 5%;
+}
+
+.logo-icon {
+    margin-bottom: 2rem;
+}
+.logo-icon img {
+    margin-left: .5rem;
+    height: 4rem;
+    width: 4rem;
+}
