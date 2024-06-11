@@ -1,0 +1,19 @@
+
+.heading-text{
+    height: 100%;
+    justify-content: space-evenly;
+}
+.heading-text div{
+    font-size: 80%;
+}
+.employee-heading{
+    font-size: 85%;
+    font-weight: 550;
+    opacity: 0.8;
+}
+.add-employee-button{
+    /* color: white; */
+    /* background-color: #f44848; */
+    height: 2rem;
+    border: none;
+}

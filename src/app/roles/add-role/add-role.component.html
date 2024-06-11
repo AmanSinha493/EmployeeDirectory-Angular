@@ -43,12 +43,14 @@
                     <div class="custom-select">
                         <input type="text" class="select-selected" placeholder="Search for an employee" />
                         <ul class="select-items hide">
-                        </ul>       
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="form-buttons">
-                <button type="reset">Cancel</button>
+                <a routerLink="/roles" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <button type="reset">Cancel</button>
+                </a>
                 <button type="submit" id="submitAddRolesBtn">Add Role</button>
             </div>
         </form>

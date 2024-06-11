@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-alphabetic-filter',
@@ -7,11 +7,28 @@ import { CommonModule } from '@angular/common';
   templateUrl: './alphabetic-filter.component.html',
   styleUrl: './alphabetic-filter.component.css'
 })
-export class AlphabeticFilterComponent {
+
+export class AlphabeticFilterComponent implements OnInit{
+  ngOnInit(){
+
+  }
+// @Output() checkedAlphabet: EventEmitter<string> = new EventEmitter<string>();
+@Output() alphabetSelected = new EventEmitter<string>();
+
   range(start: number, end: number) {
     return Array(end - start).fill(0).map((_, i) => start + i);
   }
   getLetter(i: number): string {
     return String.fromCharCode(64 + i);
+  }
+  
+  selectedAlphabet: string | null = null;
+  selectAlphabet(letter: string): void {
+    if (this.selectedAlphabet === letter) {
+      this.selectedAlphabet = null;
+    } else {
+      this.selectedAlphabet = letter;
+      this.alphabetSelected.emit(letter);
+    }
   }
 }

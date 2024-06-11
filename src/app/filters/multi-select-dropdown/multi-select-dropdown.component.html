@@ -1,0 +1,8 @@
+<div class="flex-column filter" id="{{label}}-filter">
+    <div class="filter-options dark-grey flex-column" (click)="toggleDropdown($event)">
+        {{label}}</div>
+    <div class="{{label}}-dropdown filter-dropdown hide" >
+        <div *ngFor="let option of options" class="{{option}}"><input type="checkbox" 
+            [checked]="isChecked(option)" (change)="selectFilter($event, option)">{{option}}</div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+app-filter-bar{
+    z-index: 2;
+}
+
+app-employee-table{
+    z-index: -100;
+}

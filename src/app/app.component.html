@@ -18,25 +18,12 @@
 <body>
   <div class="main-body grid" id="main-body">
     <div class="side-bar flex-column" id="side-bar">
-      <app-org-logo [isCollapsed]='isCollapsed'></app-org-logo>
-      <app-side-bar-navigation [isCollapsed]='isCollapsed'></app-side-bar-navigation>
-      <app-update-box [isCollapsed]='isCollapsed'></app-update-box>
-      
+      <app-side-bar [isCollapsed]='isCollapsed'></app-side-bar>
     </div>
-    <!-- <div class="side-bar-collapsed flex-column hide">
-      <app-side-bar-collapsed></app-side-bar-collapsed>
-    </div>   -->
     <div class="employees-detail flex-column">
       <img src="../assets/images/handle.png" alt="" class="collapse-btn collapse-button" (click)="sideBarCollapse()">
       <app-search-bar></app-search-bar>
-      <app-header></app-header>
-      <!-- <app-alphabetic-filter></app-alphabetic-filter> -->
-      <!-- <app-filter-bar></app-filter-bar> -->
-      <!-- <app-employee-table></app-employee-table> -->
-      <!-- <app-add-employee-modal></app-add-employee-modal> -->
-      <!-- <app-role-body></app-role-body> -->
-      <!-- <app-add-role></app-add-role> -->
-    <app-role-employees></app-role-employees>
+      <router-outlet></router-outlet> 
     </div>
   </div>
 </body>

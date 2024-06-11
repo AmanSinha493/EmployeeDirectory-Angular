@@ -1,51 +1,16 @@
-<div class="a-to-z-filter flex">
+<!-- <div class="a-to-z-filter flex">
     <img id="filter-icon" src="../../../assets/images/filter-icon-black.svg" alt="filter">
-    <!-- <div>A</div>
-    <div>B</div>
-    <div>C</div>
-    <div>D</div>
-    <div>E</div>
-    <div>F</div>
-    <div>G</div>
-    <div>H</div>
-    <div>I</div>
-    <div>J</div>
-    <div>K</div>
-    <div>L</div>
-    <div>M</div>
-    <div>N</div>
-    <div>O</div>
-    <div>P</div>
-    <div>Q</div>
-    <div>R</div>
-    <div>S</div>
-    <div>T</div>
-    <div>U</div>
-    <div>V</div>
-    <div>W</div>
-    <div>X</div>
-    <div>Y</div>
-    <div>Z</div> -->
     <div *ngFor="let i of range(1, 27)">
-        <!-- {{ String.fromCharCode(64 + i) }} -->
         {{ getLetter(i) }}
       </div>
+</div> -->
+
+
+<div class="a-to-z-filter flex">
+  <img id="filter-icon" src="../../../assets/images/filter-icon-black.svg" alt="filter">
+  <div *ngFor="let i of range(1, 26)" 
+       [class.selected]="getLetter(i) === selectedAlphabet"
+       (click)="selectAlphabet(getLetter(i))">
+    {{ getLetter(i) }}
+  </div>
 </div>
-
-
-
-<!-- import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-example',
-  template: `
-    <div *ngFor="let i of range(1, 27)">
-      {{ String.fromCharCode(64 + i) }}
-    </div>
-  `
-})
-export class ExampleComponent {
-  range(start: number, end: number) {
-    return Array(end - start).fill(0).map((_, i) => start + i);
-  }
-} -->

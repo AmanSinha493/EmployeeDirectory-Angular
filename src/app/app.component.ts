@@ -1,23 +1,19 @@
-import { Component, output } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { UpdateBoxComponent } from './side-bar/update-box/update-box.component';
-import { OrgLogoComponent } from './side-bar/org-logo/org-logo.component';
-import { SideBarNavigationComponent } from './side-bar/side-bar-navigation/side-bar-navigation.component';
+import { Component} from '@angular/core';
+import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { HeaderComponent } from './header/header.component';
-import { AlphabeticFilterComponent } from './filters/alphabetic-filter/alphabetic-filter.component';
-import { FilterBarComponent } from './filters/filter-bar/filter-bar.component';
-import { EmployeeTableComponent } from './employee-table/employee-table.component';
-import { AddEmployeeModalComponent } from './add-employee-modal/add-employee-modal.component';
+import { EmployeeTableComponent } from './employees/employee-table/employee-table.component';
+import { AddEmployeeModalComponent } from './employees/add-employee-modal/add-employee-modal.component';
 import { RoleBodyComponent } from './roles/role-body/role-body.component';
 import { AddRoleComponent } from './roles/add-role/add-role.component';
 import { RoleEmployeesComponent } from './roles/role-employees/role-employees.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UpdateBoxComponent, OrgLogoComponent, FilterBarComponent, AlphabeticFilterComponent,
-    SideBarNavigationComponent, SearchBarComponent, HeaderComponent, EmployeeTableComponent,AddRoleComponent, AddEmployeeModalComponent,
-    RoleBodyComponent, RoleEmployeesComponent],
+  imports: [RouterOutlet,RouterModule,RouterLinkActive,
+     SearchBarComponent,  EmployeeTableComponent,AddRoleComponent, AddEmployeeModalComponent,
+    RoleBodyComponent, RoleEmployeesComponent,SideBarComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

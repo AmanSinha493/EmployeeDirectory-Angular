@@ -1,0 +1,52 @@
+.add-role-button{
+    cursor: pointer;
+    justify-content: center;
+    background-color: #f44848;
+    border: none;
+    width: 11%;
+    border-radius: .5rem;
+    align-items: center;
+    padding: 0.5%;
+    height: 45%;
+}
+.heading-text {
+    margin-right: auto;
+    font-size: 1rem;
+}
+.add-role-button button{
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    width: 100%;
+    background-color: #f44848;
+
+}
+a{
+    color: #4c5f71;
+    opacity: 0.9;
+}
+.heading-role{
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2%;
+    height: 8vh;
+}
+.add-role-button p {
+    color: white;
+}
+
+.add-role-button i {
+    color: white;
+    padding-right: 5%;
+}
+
+.role-heading{
+    justify-content: space-between;
+}
+.role-name{
+    /* word-spacing: 80%; */
+    font-weight: 800;
+    font-size: .8rem;
+    /* word-spacing: .1rem; */
+}
