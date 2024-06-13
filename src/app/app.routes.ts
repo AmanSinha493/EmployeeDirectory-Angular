@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { EmployeeContainerComponent } from './body-container/employee-container/employee-container.component';
-import { RoleContainerComponent } from './body-container/role-container/role-container.component';
-import { RoleDetailContainerComponent } from './body-container/role-detail-container/role-detail-container.component';
-import { AddRoleComponent } from './roles/add-role/add-role.component';
-import { LoginComponent } from './login/login.component';
+import { EmployeeContainerComponent } from './components/employee/employee-container/employee-container.component';
+import { RoleContainerComponent } from './components/roles/role-container/role-container.component';
+import { RoleDetailContainerComponent } from './components/roles/role-detail-container/role-detail-container.component';
+import { AddRoleComponent } from './components/roles/add-role/add-role.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
     {

@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeServiceService {
+export class LocationServicesService {
 
   constructor(private http:HttpClient) { }
-  private  url:string="https://localhost:7172/api/Employees";
+  private  url:string="https://localhost:7172/api/Location";
   Get(){
     return this.http.get(this.url);
   }

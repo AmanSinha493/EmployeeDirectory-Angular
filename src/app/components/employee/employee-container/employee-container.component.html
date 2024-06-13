@@ -1,0 +1,11 @@
+<div class="employee-container">
+    <app-header (triggerExport)="tableToCSV()"></app-header>
+    <app-alphabetic-filter (alphabetSelected)="handleAlphabetSelected($event)"
+        (triggerAlphabeticFilter)="applyAlphabeticFilter()"></app-alphabetic-filter>
+    <app-filter-bar (filterParams)="handleFilterproperties($event)" (triggerApplyFilter)="applyFilter()"
+        (triggerResetFilter)="resetFilter()"></app-filter-bar>
+    <div>
+        <app-employee-table [employeesData]="employeesData" class="flex-colum"></app-employee-table>
+    </div>
+    <app-add-employee-modal></app-add-employee-modal>
+</div>

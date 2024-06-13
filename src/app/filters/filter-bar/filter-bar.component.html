@@ -4,13 +4,18 @@
 
         <img src="../../../assets/images/filter-3-line red.svg" alt="filter" class="red-filter">
         <!-- <img src="./assets/tick.svg" alt="filter" class="red-filter"> -->
-        <app-multi-select-dropdown [options]="StatusOptions" [label]="'Status'" class="status" (checkedValuesChange)="selectedStatus($event)"></app-multi-select-dropdown>
-        <app-multi-select-dropdown [options]="locationOptions" [label]="'Location'" class="location" (checkedValuesChange)="selectedLocation($event)"></app-multi-select-dropdown>
-        <app-multi-select-dropdown [options]="DepartmentOptions " [label]="'Department'" class="department" (checkedValuesChange)="selectedDepartment($event)"></app-multi-select-dropdown>
+        <app-multi-select-dropdown [options]="StatusOptions" [label]="'Status'" class="status"
+            (checkedValuesChange)="selectedStatus($event)" ></app-multi-select-dropdown>
+
+        <app-multi-select-dropdown [options]="locationOptions" [label]="'Location'" class="location"
+            (checkedValuesChange)="selectedLocation($event)"></app-multi-select-dropdown>
+
+        <app-multi-select-dropdown [options]="DepartmentOptions " [label]="'Department'" class="department"
+            (checkedValuesChange)="selectedDepartment($event)"></app-multi-select-dropdown>
 
     </div>
     <div class="flex filter-action">
-        <div class="reset-btn flex" >Reset</div>
-        <div class="apply-btn flex" (click)="applyilter()">Apply</div>
+        <div class="reset-btn flex" (click)="resetFilter()">Reset</div>
+        <div class="apply-btn flex" (click)="applyFilter()">Apply</div>
     </div>
 </div>

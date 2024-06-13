@@ -18,11 +18,11 @@ login(username: string, password: string): Observable<string> {
 
   return this.http.post(`${this.apiUrl}`, body, { responseType: 'text' }).pipe(
     tap(token => {
-      localStorage.setItem(this.tokenKey, token);
+      sessionStorage.setItem(this.tokenKey, token);
     }),
     catchError((error) => {
       console.error('Login error:', error);
-      localStorage.removeItem(this.tokenKey);
+      sessionStorage.removeItem(this.tokenKey);
       return of(''); 
     })
   );

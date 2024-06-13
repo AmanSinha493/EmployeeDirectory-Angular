@@ -1,13 +1,13 @@
 import { Component} from '@angular/core';
 import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { EmployeeTableComponent } from './employees/employee-table/employee-table.component';
-import { AddEmployeeModalComponent } from './employees/add-employee-modal/add-employee-modal.component';
-import { RoleBodyComponent } from './roles/role-body/role-body.component';
-import { AddRoleComponent } from './roles/add-role/add-role.component';
-import { RoleEmployeesComponent } from './roles/role-employees/role-employees.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
+import { SearchBarComponent } from './components/shared/search-bar/search-bar.component';
+import { EmployeeTableComponent } from './components/employee/employee-table/employee-table.component';
+import { AddEmployeeModalComponent } from './components/employee/add-employee-modal/add-employee-modal.component';
+import { RoleBodyComponent } from './components/roles/role-body/role-body.component';
+import { AddRoleComponent } from './components/roles/add-role/add-role.component';
+import { RoleEmployeesComponent } from './components/roles/role-employees/role-employees.component';
+import { SideBarComponent } from './components/shared/side-bar/side-bar.component';
 @Component({
   selector: 'app-root',
   standalone: true,

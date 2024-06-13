@@ -12,11 +12,7 @@ export class MultiSelectDropdownComponent {
   @Input() options: string[] = [];
   @Output() checkedValuesChange: EventEmitter<string[]> = new EventEmitter<string[]>();
   ngOnInit() {
-    // let input = document.querySelectorAll('.filter-options-container input') as NodeListOf<HTMLInputElement>;
-    // for (let i = 0; i < input.length; i++) {
-    //     let select = input[i].parentNode! as HTMLElement;
-    //     select.addEventListener('click', this.selectFilter)
-    // }
+
   }
 
   checkedValues: string[] = [];
@@ -33,10 +29,17 @@ export class MultiSelectDropdownComponent {
     dropdown.classList.toggle('hide');
   }
 
+  hideDropddown() {
+    if (!document.querySelector(`#${this.label}-filter .${this.label}-dropdown`)?.classList.contains('hide'))
+      document.querySelector(`#${this.label}-filter .${this.label}-dropdown`)?.classList.add('hide');
+    let input = document.querySelectorAll('.filter-options-container input') as NodeListOf<HTMLInputElement>;
+    input.forEach((element) => { element.checked = false });
+  }
+  
   emitCheckedValues(): void {
     this.checkedValuesChange.emit(this.checkedValues);
   }
-  
+
   isChecked(option: string): boolean {
     return this.checkedValues.includes(option);
   }
