@@ -1,7 +1,9 @@
 <div class="employee-list-body flex-column">
     <div class="list-updation-bar flex">
         <img src="../.../../assets/images/arrow-turn left -down.png" alt="arrow" div class="left-down-arrow">
-        <button disabled class="delete-btn">Delete</button>
+        <button [disabled]="!(selectedEmployees.length>0)" class="delete-btn" (click)="deleteEmployees()">Delete</button>
+        <!-- <button [disabled]="!anyCheckboxSelected()" class="delete-btn">Delete</button> -->
+
         <img src="../../assets/images/table-add.png" alt="add-employee" class="add-list-btn">
     </div>
 
@@ -10,7 +12,7 @@
             <tr>
                 <th class="check-box-col">
                     <label for="">
-                        <input type="checkbox">
+                        <input type="checkbox" (change)="toggleRow()" [checked]="selectedEmployees.length===employeesData.length">
                     </label>
                 </th>
                 <th class="col col-user">
@@ -47,13 +49,10 @@
             </tr>
         </thead>
         <tbody >
-            <!-- <app-employee-row [employees]="employees"></app-employee-row> -->
-            <!-- <tr *ngFor="let employee of employees">
-                <app-employee-row [empData]="employee"></app-employee-row>
-            </tr> -->
-
             <tr *ngFor="let employee of employeesData">
-                <td class="check-box-col"><input type="checkbox" class="select"></td>
+                <td class="check-box-col">
+                    <input type="checkbox" class="select" id={{employee.id}} [checked]="isChecked" (change)="selectRow($event)">
+                </td>
                 <td class="list-profile flex edit-col">
                     <img src="{{employee.profileImage}}" alt="profile">
                     <div>

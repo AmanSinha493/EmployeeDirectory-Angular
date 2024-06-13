@@ -13,7 +13,7 @@ export class RoleBodyComponent {
 
   roles:any
   constructor(private rolesDetail:RoleServiceService) {
-    this.rolesDetail.roleDetails().subscribe((data)=>{
+    this.rolesDetail.Get().subscribe((data)=>{
       console.log(data);
       this.roles=data;
     })}

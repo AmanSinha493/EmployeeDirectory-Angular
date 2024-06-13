@@ -87,5 +87,21 @@ export class EmployeeContainerComponent {
     temp_link.click();
     document.body.removeChild(temp_link);
   }
+  deleteEmployees(employeesToDelete:string[]) {
+    employeesToDelete.forEach(element => {
+      this.empServices.delete(element).subscribe({
+        next: () => {
+          console.log("Employee Deleted Successfully");
+          this.employeesData.filter((x)=>{
+              x.id!=element;
+          })
+        },
+        error: (error) => {
+          console.error("Error deleting Employee", error);
+        }
+      });
 
+    });
+
+  }
 }

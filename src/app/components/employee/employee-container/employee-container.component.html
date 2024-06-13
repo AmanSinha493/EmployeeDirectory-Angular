@@ -5,7 +5,8 @@
     <app-filter-bar (filterParams)="handleFilterproperties($event)" (triggerApplyFilter)="applyFilter()"
         (triggerResetFilter)="resetFilter()"></app-filter-bar>
     <div>
-        <app-employee-table [employeesData]="employeesData" class="flex-colum"></app-employee-table>
+        <app-employee-table [employeesData]="employeesData" class="flex-colum"
+        (employeesToDelete)="deleteEmployees($event)"></app-employee-table>
     </div>
     <app-add-employee-modal></app-add-employee-modal>
 </div>

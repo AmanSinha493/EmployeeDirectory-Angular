@@ -21,7 +21,7 @@ export class LoginComponent {
   login() {
     this.authService.login(this.username, this.password).subscribe(response => {
       if (response) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/employee']);
       } else {
         alert('Login failed');
       }
@@ -29,11 +29,3 @@ export class LoginComponent {
   }
 }
 
-// export class Login{
-//   id:string;
-//   password:string;
-//   constructor() {
-//     this.id='';
-//     this.password='';
-//   }
-// }

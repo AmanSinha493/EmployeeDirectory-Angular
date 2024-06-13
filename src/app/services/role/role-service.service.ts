@@ -8,7 +8,7 @@ export class RoleServiceService {
 
   constructor(private http:HttpClient) { }
   private  url:string="https://localhost:7172/api/Role";
-  roleDetails(){
+  Get(){
     return this.http.get(this.url);
   }
 }
