@@ -33,7 +33,7 @@
 }
 
 .search-bar-name-block {
-    margin-right: 1vw;
+    margin-right: 2vw;
     align-items: center;
     font-size: .8rem;
 }
@@ -54,7 +54,7 @@
 
 .admin__name {
     font-size: .65rem;
-    word-wrap: normal;
+    width: 5rem;
 }
 
 .admin__profile {
@@ -66,4 +66,16 @@
 .search-bar-name-block .fa-angle-down {
     padding-left: 1vw;
     color: black;
+}
+.arrow{
+    margin-top: .5vh;
+    cursor: pointer;
+}
+/* .profile-dropdown {
+    top: 2vh;
+    position: absolute;
+    display: none;
+} */
+.arrow img{
+    height: 1.8rem;
 }

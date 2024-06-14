@@ -24,10 +24,10 @@ export const routes: Routes = [
     },
     {
         component:RoleDetailContainerComponent,
-        path:'roles/role-detail'
+        path:'roles/:id'
     },
     {
         component:AddRoleComponent,
-        path:'roles/addRole'
+        path:'addRole'
     }
 ];

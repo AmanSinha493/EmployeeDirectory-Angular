@@ -22,11 +22,11 @@
                     <img src="../../../assets/images/admin-search.png" alt="">
                     <img src="../../../assets/images/admin-search.png" alt="">
                     <img src="../../../assets/images/admin-search.png" alt="">
-                    <p>{{0}}</p>
+                    <p>+{{4}}</p>
                 </div>
             </div>
         </div>
-        <a routerLink="role-detail">
+        <a [routerLink]="['/roles',role.id]">
             <div class="view-btn flex"><button>View all Employees</button><i class="fa-solid fa-arrow-right-long dark-grey"></i>
             </div>
         </a>

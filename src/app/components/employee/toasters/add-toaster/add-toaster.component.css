@@ -1,0 +1,28 @@
+.toast::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    animation: hidetoast 2.5s linear 0.5s 1 forwards;
+}
+.toast.fail::after{
+    background-color: red;
+}
+.toast.success::after{
+    background-color: green;
+}
+
+.toast-tick-container,.toast-cross-container{
+    background-color: #e7f4e8;
+    height: 100%;
+    padding: 0 0.5rem;
+}
+
+.toast .fail{
+    background-color: #fee8e8;
+ }
+.toast .success{
+    background-color: #e7f4e8;
+ }

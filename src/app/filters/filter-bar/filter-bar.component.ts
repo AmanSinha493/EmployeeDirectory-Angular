@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { MultiSelectDropdownComponent } from '../multi-select-dropdown/multi-select-dropdown.component';
 import { LocationServicesService } from '../../services/location/location-services.service';
 import { Department } from '../../models/Department';
@@ -14,7 +14,6 @@ export class FilterBarComponent {
   locationOptions: any;
   DepartmentOptions: any;
   constructor(private locService: LocationServicesService, private deptService: DepartmentServicesService) {
-    // this.locService.Get().subscribe((data) => {this.locationOptions = data;})
     this.locService.Get().subscribe((data: any) => {
       this.locationOptions = Object.values(data).map((location: any) => location.name);
     });
@@ -25,14 +24,10 @@ export class FilterBarComponent {
   @Output() filterParams: EventEmitter<string[]> = new EventEmitter<string[]>();
   @Output() triggerApplyFilter: EventEmitter<any> = new EventEmitter();
   @Output() triggerResetFilter: EventEmitter<any> = new EventEmitter();
-
-  // locationOptions: string[] = ['Hyderabad', 'Banglore', 'Mumbai'];
-  // DepartmentOptions: string[] = ['Product Engg', 'QA'];
+  @Input() showStatus = true;
   StatusOptions: string[] = ['Active', 'InActive'];
-  // hideDropdown:boolean=false;
-
   status: string[] = [];
-  location: string[] = [];
+  location: string[] =[];
   department: string[] = [];
   filterProperties: string[] = [];
   selectedStatus(values: string[]): void {
@@ -47,9 +42,10 @@ export class FilterBarComponent {
     this.department = values;
     console.log(this.department);
   }
-
+  isDisabled(): boolean {
+    return this.status.length === 0 && this.location.length === 0 && this.department.length === 0;
+  }
   applyFilter(): void {
-    // document.querySelector('.apply-btn')?.classList.add('active');
     this.filterProperties = [];
     if (this.status.length === 0) {
       this.filterProperties.push('status');
@@ -68,7 +64,9 @@ export class FilterBarComponent {
     } else {
       this.filterProperties.push(...this.department);
     }
-
+    this.filterProperties = this.filterProperties.map(property =>
+      property.trim().toLowerCase().split(' ').join('')
+    );
     this.filterParams.emit(this.filterProperties);
     this.triggerApplyFilter.emit();
   }
@@ -78,8 +76,10 @@ export class FilterBarComponent {
     document.querySelector('.apply-btn')?.classList.remove('active');
     document.querySelector('.reset-btn')?.classList.remove('active');
     this.dropdown.forEach(child => child.hideDropddown());
+    this.status.length = 0;
+    this.location.length = 0;
+    this.department.length = 0
     this.triggerResetFilter.emit();
-    // this.hideDropdown=true;
   }
 }
 

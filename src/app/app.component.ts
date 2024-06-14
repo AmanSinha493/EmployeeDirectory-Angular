@@ -1,25 +1,30 @@
-import { Component} from '@angular/core';
-import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './components/shared/search-bar/search-bar.component';
-import { EmployeeTableComponent } from './components/employee/employee-table/employee-table.component';
-import { AddEmployeeModalComponent } from './components/employee/add-employee-modal/add-employee-modal.component';
 import { RoleBodyComponent } from './components/roles/role-body/role-body.component';
 import { AddRoleComponent } from './components/roles/add-role/add-role.component';
 import { RoleEmployeesComponent } from './components/roles/role-employees/role-employees.component';
 import { SideBarComponent } from './components/shared/side-bar/side-bar.component';
+import { AuthServiceService } from './services/auth/auth-service.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterModule,RouterLinkActive,
-     SearchBarComponent,  EmployeeTableComponent,AddRoleComponent, AddEmployeeModalComponent,
-    RoleBodyComponent, RoleEmployeesComponent,SideBarComponent,HttpClientModule],
+  imports: [RouterOutlet, RouterModule, RouterLinkActive,
+    SearchBarComponent, AddRoleComponent,
+    RoleBodyComponent, RoleEmployeesComponent,
+    SideBarComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'PracticeAngular';
   isCollapsed: boolean = false;
+  authService;
+  constructor(authService:AuthServiceService, private router: Router){
+    this.authService=authService;
+    console.log(this.router.url);
+  };
   sideBarCollapse() {
     const icon = document.querySelector(".collapse-btn")! as HTMLButtonElement;
     const mainBody = document.getElementById("main-body")! as HTMLElement;
@@ -33,4 +38,10 @@ export class AppComponent {
     }
     this.isCollapsed = !this.isCollapsed;
   }
+
+  // isAuthenticated(){
+  //   const isActive = this.router.isActive('', true);
+  //   return (this.authService.isAuthenticated() && isActive)
+  // }
+  
 }

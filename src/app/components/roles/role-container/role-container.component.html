@@ -1,4 +1,4 @@
 <app-roles-header></app-roles-header>
-<app-filter-bar></app-filter-bar>
-<app-role-body></app-role-body>
-
+<app-filter-bar [showStatus]="false" (filterParams)="handleFilterproperties($event)"
+    (triggerApplyFilter)="applyFilter()" (triggerResetFilter)="resetFilter()"></app-filter-bar>
+<app-role-body [roles]="roles"></app-role-body>

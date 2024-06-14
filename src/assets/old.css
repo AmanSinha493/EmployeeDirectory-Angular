@@ -807,7 +807,7 @@ tr {
     text-align: left;
 }
 
-.ellipsis-menu {
+/* .ellipsis-menu {
     z-index: 2;
     border-radius: .5rem;
     position: absolute;
@@ -828,7 +828,7 @@ tr {
 
 .hide-ellipsis-menu {
     display: none;
-}
+} */
 
 thead,
 .list-updation-bar {

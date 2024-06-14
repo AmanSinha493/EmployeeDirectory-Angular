@@ -18,7 +18,7 @@ export class MultiSelectDropdownComponent {
   checkedValues: string[] = [];
   selectFilter(event: any, option: string): void {
     const checkbox = event.target as HTMLInputElement;
-    checkbox.checked ? this.checkedValues.push(option) : this.checkedValues = this.checkedValues.filter(value => value !== option);
+    checkbox.checked ? this.checkedValues.push(option.toLowerCase().split(' ').join('')) : this.checkedValues = this.checkedValues.filter(value => value !== option);
     console.log(this.checkedValues);
     this.checkedValuesChange.emit(this.checkedValues);
   }

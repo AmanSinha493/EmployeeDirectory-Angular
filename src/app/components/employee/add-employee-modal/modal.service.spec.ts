@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OpenModalService } from './open-modal.service';
+import { OpenModalService } from './modal.service';
 
-describe('OpenModalService', () => {
+describe('modalService', () => {
   let service: OpenModalService;
 
   beforeEach(() => {

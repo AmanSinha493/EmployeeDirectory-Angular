@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { AddEmployeeModalComponent } from '../add-employee-modal/add-employee-modal.component';
-import { OpenModalService } from '../add-employee-modal/open-modal.service';
+import { OpenModalService } from '../add-employee-modal/modal.service';
 import { Employee } from '../../../models/Employee';
 import { Project } from '../../../models/Project';
 import { Role } from '../../../models/Role';

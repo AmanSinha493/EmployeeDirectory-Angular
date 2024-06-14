@@ -6,7 +6,11 @@
         (triggerResetFilter)="resetFilter()"></app-filter-bar>
     <div>
         <app-employee-table [employeesData]="employeesData" class="flex-colum"
-        (employeesToDelete)="deleteEmployees($event)"></app-employee-table>
+        (sortData)="sort($event)"
+        (employeeToShow)="showEmployee($event)"></app-employee-table>
     </div>
-    <app-add-employee-modal></app-add-employee-modal>
+    <app-add-employee-modal [employee]="employeeToShow"></app-add-employee-modal>
+    <!-- <app-add-toaster [message]="'yourMessage'" [isSuccessful]="true"></app-add-toaster> -->
+
+
 </div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { OpenModalService } from './open-modal.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { OpenModalService } from './modal.service';
 import { EmailValidator, FormBuilder, FormGroup, Validators, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -23,10 +23,33 @@ import { Observer } from 'rxjs';
 })
 
 export class AddEmployeeModalComponent implements OnInit {
-
   addEmployeeForm!: FormGroup;
   submitted: boolean = false;
-
+  @Input() employee: Employee = {
+    id: '',
+    name: '',
+    email: '',
+    profileImage: '',
+    joiningDate: '',
+    department: {
+      id: '',
+      name: ''
+    },
+    role: '',
+    roleID: '',
+    location: {
+      id: '',
+      name: ''
+    },
+    mobileNo: '',
+    status: '',
+    dob: '',
+    manager: '',
+    project: {
+      id: '',
+      name: ''
+    }
+  };
   previewSrc: string = "../../assets/images/add-employee-default-user.svg";
   locations!: Location[];
   departments!: Department[];
@@ -47,6 +70,8 @@ export class AddEmployeeModalComponent implements OnInit {
   dept: any;
   manager: any;
   project: any;
+
+
   constructor(private fb: FormBuilder,
     private OpenModalService: OpenModalService,
     private locationService: LocationServicesService,
@@ -90,7 +115,6 @@ export class AddEmployeeModalComponent implements OnInit {
       this.profileImg = files[0];
       const url: string = URL.createObjectURL(this.profileImg);
       this.previewSrc = url;
-
     }
   }
   getFormControl(controlName: string): AbstractControl | null {
@@ -156,15 +180,7 @@ export class AddEmployeeModalComponent implements OnInit {
         newEmp.profileImage = (reader.result as string);
       };
     }
-    // this.empService.add(newEmp)
-    //   .subscribe(
-    //     response => {
-    //       console.log('Employee added successfully:', response);
-    //     },
-    //     error => {
-    //       console.error('Error adding employee:', error);
-    //     }
-    //   );
+
     const Observable: Observer<Employee> = {
       next: (response) => { },
       error: (error) => {
@@ -172,15 +188,6 @@ export class AddEmployeeModalComponent implements OnInit {
       },
       complete: () => { }
     };
-    // this.empService.add(newEmp)
-    //   .subscribe({
-    //     next: response => {
-    //       console.log('Employee added successfully:', response);
-    //     },
-    //     error: error => {
-    //       console.error('Error adding employee:', error);
-    //     }
-    //   });
     console.log(newEmp);
     this.empService.add(newEmp).subscribe(Observable);
   }
@@ -288,5 +295,9 @@ export class AddEmployeeModalComponent implements OnInit {
         // populate.populateTable();
       }, 200);
     }
+  }
+
+  fillData(employee: Employee) {
+    this.id = employee.id;
   }
 }

@@ -12,11 +12,11 @@ export class EmployeeServiceService {
   Get() {
     return this.http.get(this.url);
   }
-  // add(employee:Employee) {
-    
-  // }
+  getById(id:string) {
+    return this.http.get(`${this.url}/${id}`);
+  }
+ 
   add(employee: Employee): Observable<Employee> {
-    // const employeeJson = JSON.stringify(employee);
     return this.http.post<Employee>(this.url, employee);
   }
   delete(id: string): Observable<void> {

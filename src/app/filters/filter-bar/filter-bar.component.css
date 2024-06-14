@@ -47,24 +47,31 @@
 }
 
 
-.reset-btn {
+.reset-btn[disabled] {
     background-color: #e8e7e7;
     color: #f44848bb;
     border: 1px solid #f44848;
 }
 
-.reset-btn.active {
+.reset-btn {
     background-color: #fff;
     color: #f44848;
+    border: 1px solid #f44848;
+
 }
 
-.apply-btn {
+.apply-btn[disabled] {
+    border: none;
     background-color: #f89191;
     color: #fff;
 }
 
-.apply-btn.active {
+.apply-btn {
+    border: none;
+
     background-color: #f44848;
+    color: #fff;
+
 }
 
 

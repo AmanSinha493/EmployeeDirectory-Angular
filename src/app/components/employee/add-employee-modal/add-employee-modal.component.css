@@ -10,7 +10,7 @@
     /* padding-left: 3%; */
     padding: 0% 3%;
     position: absolute;
-    top: 1.5%;
+    top: -2%;
     left: 10%;
     transition: transform 0.4s, top 0.4s;
     /* transition: all .5s ease-in-out; */

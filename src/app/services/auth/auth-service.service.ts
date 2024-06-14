@@ -30,23 +30,24 @@ login(username: string, password: string): Observable<string> {
 
 
   logout() {
-    localStorage.removeItem(this.tokenKey);
+    sessionStorage.removeItem(this.tokenKey);
   }
 
   isAuthenticated(): boolean {
-    return !!localStorage.getItem(this.tokenKey);
+    return !!sessionStorage.getItem(this.tokenKey);
   }
+  
   getToken(): string | null {
-    return localStorage.getItem(this.tokenKey);
+    return sessionStorage.getItem(this.tokenKey);
   }
 
-  getRecipes(category: any): Observable<any> {
-    const categorySearch = category.alt;
-    const options = {
-      headers: {
-        'Content-Type': 'text/plain'
-      }
-    };
-    return this.http.post<any>('/data', categorySearch, options);
-  }
+  // getRecipes(category: any): Observable<any> {
+  //   const categorySearch = category.alt;
+  //   const options = {
+  //     headers: {
+  //       'Content-Type': 'text/plain'
+  //     }
+  //   };
+  //   return this.http.post<any>('/data', categorySearch, options);
+  // }
 }

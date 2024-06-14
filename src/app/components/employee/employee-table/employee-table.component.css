@@ -142,8 +142,8 @@ th span {
 
 }
 
-.btn-active,
-.btn-inactive {
+.active,
+.inactive {
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
@@ -153,12 +153,12 @@ th span {
     text-align: center;
 }
 
-.btn-active {
+.active {
     background-color: #e7f4e8;
     color: #419077;
 }
 
-.btn-inactive {
+.inactive {
     background-color: #feeeee;
     color: red;
 }

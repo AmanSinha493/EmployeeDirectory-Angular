@@ -5,12 +5,9 @@ app-side-bar-navigation{
     margin-top: 3vh;
 }
 
-/* .employees-detail{
-    border-collapse: collapse;
-    height: 100%;
-    overflow-y: scroll;
-} */
-
+.hide{
+    display: none;
+}
 .employees-detail {
     height: 100vh;
     /* overflow: auto; */
