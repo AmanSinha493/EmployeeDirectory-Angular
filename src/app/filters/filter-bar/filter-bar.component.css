@@ -1,0 +1,77 @@
+*{
+    position: relative;
+}
+.filter-bar {
+    z-index: 1;
+    margin: 2vh 0;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fac0c0;
+    border-radius: .3rem;
+    padding: 0 1%;
+    flex-wrap: nowrap;
+    background-color: #fdf2f2;
+}
+
+.filter-bar>:first-child>:first-child {
+    color: #f44848;
+    font-size: .8rem;
+    opacity: .9;
+    margin-left: .5%;
+}
+
+.filter-options-container {
+    width: 50%;
+    height: 2.5rem;
+    opacity: 0.9;
+    gap: 1%;
+    align-items: center;
+
+}
+
+.filter-action {
+    justify-content: space-between;
+    align-items: center;
+    width: 13%;
+    height: 100%;
+}
+
+.reset-btn,
+.apply-btn {
+    cursor: pointer;
+    font-size: .6rem;
+    align-items: center;
+    padding: .5% 13%;
+    border-radius: .2rem;
+    height: 3.5vh;
+}
+
+
+.reset-btn[disabled] {
+    background-color: #e8e7e7;
+    color: #f44848bb;
+    border: 1px solid #f44848;
+}
+
+.reset-btn {
+    background-color: #fff;
+    color: #f44848;
+    border: 1px solid #f44848;
+
+}
+
+.apply-btn[disabled] {
+    border: none;
+    background-color: #f89191;
+    color: #fff;
+}
+
+.apply-btn {
+    border: none;
+
+    background-color: #f44848;
+    color: #fff;
+
+}
+
+

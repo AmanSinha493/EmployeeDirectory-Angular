@@ -1,0 +1,58 @@
+<section class="add-roles-container">
+    <div class="form-container flex-column">
+        <h1>Create New Role</h1>
+        <form id="roleForm" class="role-form flex-column">
+            <div>
+                <div class="role-details flex">
+                    <div class="input-field-container">
+                        <label for="roleName">Role Name</label>
+                        <input required type="text" id="roleName" name="roleName" placeholder="Role Name" />
+                    </div>
+
+                    <div class="input-field-container">
+                        <label for="department">Department</label>
+                        <select id="department" name="department" required>
+                            <option value="" hidden>Search</option>
+                            <option value="QA">QA</option>
+                            <option value="Product Engg">Product Engg</option>
+                            <!-- <option value="UI/UX">UX Designer</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Sales">Sales</option>
+                            <option value="IT">IT</option>
+                            <option value="Management">Management</option>
+                            <option value="Finance">Finance</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="input-field-container description-area">
+                    <label for="description">Description</label>
+                    <textarea rows="4" cols="50" name="description" id="description" form="employeeForm"></textarea>
+                </div>
+            </div>
+            <div class="second-section flex-column">
+                <div class="input-field-container">
+                    <label for="location">Location</label>
+                    <select id="location" name="location" required>
+                        <option value="" hidden>Search</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                </div>
+                <div class="input-field-container">
+                    <div class="custom-select">
+                        <input type="text" class="select-selected" placeholder="Search for an employee" />
+                        <ul class="select-items hide">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-buttons">
+                <a routerLink="/roles" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    <button type="reset">Cancel</button>
+                </a>
+                <button type="submit" id="submitAddRolesBtn">Add Role</button>
+            </div>
+        </form>
+    </div>
+</section>

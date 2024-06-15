@@ -1,0 +1,219 @@
+.tezo-logo img {
+    padding-top: 10%;
+    padding-left: 5%;
+    width: 60%;
+}
+
+.logo {
+    margin-bottom: 5%;
+}
+
+.logo-icon {
+    margin-bottom: 2rem;
+}
+.logo-icon img {
+    margin-left: .5rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+
+/* ------------------  side-bar-navigation  ------------------------ */
+
+.logo,
+.all,
+.user-management {
+    padding-left: 5%;
+}
+
+.all>:nth-child(4) {
+
+    margin-top: 1.5rem;
+}
+
+.function-name {
+    font-size: .7rem;
+    padding-bottom: 7%;
+}
+
+.lock-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lock-icon img {
+    height: 50%;
+}
+
+.lock-icon-collapse img {
+    height: 1.7rem;
+}
+
+.icon-container {
+    align-items: center;
+    gap: .75rem;
+}
+
+.arrow {
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow i {
+    font-size: .9rem;
+}
+
+.side-bar-options {
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.hide{
+    display: none;
+}
+
+.dasboard,
+.roles,
+.employees-bar,
+.user-management__assign,
+.user-management__roles {
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.text {
+    text-align: left;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    font-size: .8rem;
+}
+
+.employees.selected,.roles.selected{
+    color: #f44848;
+}
+
+/* .employees-bar,.user-management__roles {
+    position: relative;
+    background-color: #fde6e6;
+    border-radius: .3rem;
+} */
+
+.selected .employees-bar,.selected .user-management__roles {
+    position: relative;
+    background-color: #fde6e6;
+    border-radius: .3rem;
+}
+
+.selected-mark {
+    width: 2%;
+    border-radius: .5rem;
+    position: absolute;
+    height: 100%;
+    right: -5%;
+    background-color: #f44848;
+}
+
+a{
+    width: 100%;
+    text-align: center;
+}
+.employees-bar-collapse.selected,.roles-bar-collapse.selected {
+    position: relative;
+    background-color: #fde6e6;
+    width: 100%;
+    justify-content: center;
+}
+.selected .selected-mark-collapsed{
+    width: 4%;
+    border-radius: .5rem;
+    position: absolute;
+    height: 100%;
+    right: 1%;
+    background-color: #f44848;
+}
+
+.fa-circle {
+    margin-left: .6rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: .3rem;
+}
+
+.selected-column-number {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.selected-column-number p {
+    padding-right: .4rem;
+    padding-left: .4rem;
+    background-color: #feeeee;
+    color: #f44848;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.departments .selected {
+    background-color: #f7f8f9;
+}
+
+.departments .selected>:last-child p {
+    background-color: #f44848;
+    color: white;
+}
+
+/* ------------------  update-box  ------------------------ */
+
+.install-update {
+    
+    font-size: small;
+    /* justify-content: flex-end; */
+    border-radius: 5%;
+    background-color: #fef6f6;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 33vh;
+    margin-bottom: 2vh;
+
+}
+
+.update-text {
+    padding-top: 1%;
+    color: #f44848;
+    font-weight: 4800;
+}
+
+.update-desc {
+    padding-top: 5%;
+    font-size: smaller;
+}
+
+.dismiss-button,
+.accept-button {
+    cursor: pointer;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: .5rem;
+    justify-content: center;
+}
+
+.update-options {
+    padding-top: 5%;
+}
+
+.dismiss-button {
+    font-size: .8rem;
+    width: 25%;
+    background-color: #fde6e6;
+    color: #f44848;
+}
+
+.accept-button {
+    font-size: .8rem;
+    width: 25%;
+    margin-left: 5%;
+    background-color: #f44848;
+    color: white;
+}

@@ -1,0 +1,7 @@
+<div class="delete-confirmation flex-column" [class.show-delete-confirmation]="show">
+    <p>Are you sure you want to delete selected rows</p>
+    <div class="btn-group ">
+        <button type="submit" class="delete-yes" (click)="yes()">Yes</button>
+        <button type="reset" class="delete-no" (click)="no()">No</button>
+    </div>
+</div>

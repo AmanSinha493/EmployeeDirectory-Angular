@@ -1,0 +1,81 @@
+.search-bar {
+
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+    padding: 1.5vh .5% 1.5vh 1%;
+    box-shadow: 0.2rem 0.2rem .1rem rgba(0, 0, 0, 0.073), -0.1rem -0.1rem .1rem rgba(0, 0, 0, 0.073);
+    border-radius: .6rem;
+
+}
+
+.search-input {
+    width: 100%;
+    z-index: 2;
+}
+
+.search-input input:focus {
+    outline: none;
+
+}
+
+.search-input input {
+    height: 2rem;
+    width: 100%;
+    padding-left: 1%;
+    border: none;
+}
+
+.search-bar>:first-child {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.search-bar-name-block {
+    margin-right: 2vw;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.search-bar-icon img {
+    height: 2rem;
+}
+
+.admin {
+    width: 10vw;
+    padding-left: 2%;
+    height: 100%;
+}
+
+.admin-img {
+    padding-right: 1.5%;
+}
+
+.admin__name {
+    font-size: .65rem;
+    width: 5rem;
+}
+
+.admin__profile {
+    margin-top: 3%;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.search-bar-name-block .fa-angle-down {
+    padding-left: 1vw;
+    color: black;
+}
+.arrow{
+    margin-top: .5vh;
+    cursor: pointer;
+}
+/* .profile-dropdown {
+    top: 2vh;
+    position: absolute;
+    display: none;
+} */
+.arrow img{
+    height: 1.8rem;
+}

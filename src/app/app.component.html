@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="main-body grid" id="main-body">
-    <div class="side-bar flex-column" id="side-bar">
-      <app-update-box></app-update-box>
-    </div>
-    <div class="side-bar-collapsed flex-column hide"></div>
-    <div class="employees-detail flex-column"></div>
+<div  class="main-body grid" id="main-body">
+  <div class="side-bar flex-column" id="side-bar" >
+    <app-side-bar [isCollapsed]='isCollapsed'></app-side-bar>
   </div>
-</body>
-</html>
+  <div class="employees-detail flex-column">
+    <img  src="../assets/images/handle.png" alt="" class="collapse-btn collapse-button" (click)="sideBarCollapse()">
+    <app-search-bar></app-search-bar>
+    <router-outlet></router-outlet>
+  </div>
+</div>

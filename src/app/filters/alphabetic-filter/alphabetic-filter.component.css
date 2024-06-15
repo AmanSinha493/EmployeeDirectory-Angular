@@ -1,0 +1,33 @@
+.a-to-z-filter {
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a-to-z-filter>:first-child {
+    height: 1.25rem;
+    opacity: 0.6;
+}
+
+.a-to-z-filter>:first-child.selected {
+    content: url(../../../assets/images/filter-icon-red.svg);
+}
+
+.a-to-z-filter div:not(:first-child) {
+    padding: .3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8%;
+    height: 1.75rem;
+    font-size: small;
+    background-color: #eaebee;
+    cursor: pointer;
+    color: #8592a3;
+    border-radius: .4rem;
+}
+
+.a-to-z-filter div.selected {
+    color: #fff;
+    background-color: #f44848;
+}

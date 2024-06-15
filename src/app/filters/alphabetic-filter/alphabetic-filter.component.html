@@ -1,0 +1,16 @@
+<!-- <div class="a-to-z-filter flex">
+    <img id="filter-icon" src="../../../assets/images/filter-icon-black.svg" alt="filter">
+    <div *ngFor="let i of range(1, 27)">
+        {{ getLetter(i) }}
+      </div>
+</div> -->
+
+
+<div class="a-to-z-filter flex">
+  <img id="filter-icon" src="../../../assets/images/filter-icon-black.svg" alt="filter">
+  <div *ngFor="let i of range(1, 26)" 
+       [class.selected]="getLetter(i) === selectedAlphabet"
+       (click)="selectAlphabet(getLetter(i))">
+    {{ getLetter(i) }}
+  </div>
+</div>

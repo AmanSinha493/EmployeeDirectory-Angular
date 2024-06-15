@@ -1,0 +1,38 @@
+<div class="role-desc">
+    <div class="role-desc__title dark-grey">Role Description</div>
+    <div class="role-desc__desc grey-color"> Configure the providers that are available to users when they
+        sign in.
+        Configure the providers that are available to users when they sign in. Configure the providers that
+        are available to users when they sign in. Configure the providers that are available to users when
+        they sign in</div>
+</div>
+<div class="employee-block-container grid">
+    <div class="employee-block flex-column" *ngFor="let employee of filteredEmployees">
+        <div class="employee-profile flex">
+            <div class="employee-img"><img src="{{employee.profileImage}}"></div>
+            <div>
+                <div class="employee-name">{{employee.name}}</div>
+                <div class="employee-department grey-color">Head of Product Design</div>
+            </div>
+        </div>
+        <div class="employee-info-container flex-column">
+            <div class="employee-info flex">
+                <div><img src="../../../assets/images/id.svg" alt=""></div>
+                <div> {{employee.id}}</div>
+            </div>
+            <div class="employee-info flex">
+                <div><img src="../../../assets/images/email-1_svgrepo.com.svg" alt=""></div>
+                <div>{{employee.email}}</div>
+            </div>
+            <div class="employee-info flex">
+                <div><img src="../../../assets/images/team_svgrepo.com.svg" alt=""></div>
+                <div>{{employee.department.name}}</div>
+            </div>
+            <div class="employee-info flex">
+                <div><img src="../../../assets/images/location-pin-alt-1_svgrepo.com.svg" alt=""></div>
+                <div>{{employee.location.name}}</div>
+            </div>
+        </div>
+        <div class="view-btn flex">View<i class="fa-solid fa-arrow-right-long"></i></div>
+    </div>
+</div>

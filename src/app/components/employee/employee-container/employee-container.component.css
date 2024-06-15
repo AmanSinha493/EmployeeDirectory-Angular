@@ -1,0 +1,13 @@
+/* app-filter-bar{
+    z-index: 2;
+}
+*/
+app-employee-table{
+} 
+.employee-container{
+overflow: auto;
+display: flex;
+flex-direction: column;
+height: 88vh;
+}
+

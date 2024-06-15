@@ -9,6 +9,17 @@
     display: none;
 }
 
+app-login{
+    position:fixed;
+    top: 0;
+    z-index: 5;
+    left: 0;
+    /* background: linear-gradient(to right, rgba(244, 72, 72, 0.6), rgba(200, 0, 0, 0.2)); */
+
+    background: linear-gradient(to right, rgb(75, 74, 74), rgb(255, 255, 255));
+    height: 100vh;
+    width: 100vw;
+}
 a {
     text-decoration: none;
 }
@@ -52,3 +63,44 @@ a {
     min-height: 100vh;
     transition: 0.3s ease-in-out;
 }
+
+.side-bar {
+    height: 100vh;
+}
+
+.side-bar-collapsed.hide,.side-bar.hide{
+    display: none;
+}
+
+.side-bar {
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.057);
+    overflow-x: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.collapse-button {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    top: 3vh;
+    left: -2%;
+}
+.collapse-button.collapsed{
+    transform: rotate(180deg);
+    margin-left: 1%;
+}
+
+.collapse-button img {
+    height: 2vw;
+    width: 2vw;
+    object-fit: cover;
+}
+.user-management,
+.departments,
+.install-update,
+.all {
+    margin-top: 3vh;
+}
+

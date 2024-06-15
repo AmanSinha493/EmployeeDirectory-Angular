@@ -1,0 +1,19 @@
+app-update-box{
+    margin-top: auto;
+}
+app-side-bar-navigation{
+    margin-top: 3vh;
+}
+
+.hide{
+    display: none;
+}
+.employees-detail {
+    height: 100vh;
+    /* overflow: auto; */
+}
+.employees-detail {
+    position: relative;
+    padding-right: 2%;
+    padding-left: 2%;
+}

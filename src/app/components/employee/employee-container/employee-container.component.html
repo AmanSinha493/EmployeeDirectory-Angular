@@ -1,0 +1,16 @@
+<div class="employee-container">
+    <app-header (triggerExport)="tableToCSV()"></app-header>
+    <app-alphabetic-filter (alphabetSelected)="handleAlphabetSelected($event)"
+        (triggerAlphabeticFilter)="applyAlphabeticFilter()"></app-alphabetic-filter>
+    <app-filter-bar (filterParams)="handleFilterproperties($event)" (triggerApplyFilter)="applyFilter()"
+        (triggerResetFilter)="resetFilter()"></app-filter-bar>
+    <div>
+        <app-employee-table [employeesData]="employeesData" class="flex-colum"
+        (sortData)="sort($event)"
+        (employeeToShow)="showEmployee($event)"></app-employee-table>
+    </div>
+    <app-add-employee-modal [employee]="employeeToShow"></app-add-employee-modal>
+    <!-- <app-add-toaster [message]="'yourMessage'" [isSuccessful]="true"></app-add-toaster> -->
+
+
+</div>

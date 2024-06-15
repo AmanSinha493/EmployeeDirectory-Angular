@@ -1,0 +1,40 @@
+
+.delete-confirmation,.edit-cancel-popup {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color:  #fdf2f2;
+    top: 5%;
+    left: 25%;
+    height: 20vh;
+    width: 30vw;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: translateY(-100%);
+    scale: 0.1;
+    border-radius: 1rem;
+    z-index: 4;
+    position: absolute;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.show-delete-confirmation,.show-edit-cancel-popup {
+    visibility: visible;
+    transform: translateY(0%);
+    scale: 1;
+}
+
+.delete-confirmation p,.edit-cancel-popup p {
+    margin-bottom: 2vh;
+    line-height: 130%;
+}
+
+.delete-confirmation button,.edit-cancel-popup button {
+    border: 1.5px solid #fac0c0;
+    color: white;
+    background-color: #F44848;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: .3rem;
+}
